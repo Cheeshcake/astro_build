@@ -1,0 +1,34 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Home" description="Home Page">
+  <section class="container about" aria-label="Home">
+    <div class="content" transition:name="content">
+      <h1 class="h1">
+        Hey there, 👋 <br>
+        I'm Robert.
+      </h1>
+      <p>
+        I like to craft solid and acalable front-end
+        products with great user experiences.
+      </p>
+      <a href="/about/">
+        <button>About Me</button>
+      </a>
+    </div>
+    <img src="/public/images/Coding-pana.svg" alt="illustration" transition:name="hero"/>
+  </section>
+</MainLayout>
+
+
+<style>
+  h1{
+    font-size: 80px;
+  }
+  img{
+    border: none;
+    box-shadow: none;
+    width: auto;
+  }
+</style>

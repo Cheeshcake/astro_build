@@ -1,0 +1,43 @@
+---
+const { frontmatter, url} = Astro.props;
+
+import { formatDate } from "../js/tools";
+
+
+
+const { title, date, image, description} = frontmatter;
+---
+
+<article class="card" transition:animate="slide">
+  <a href={url} aria-hidden="true" class="lien">
+    <img src={image.src} alt={image.alt} />
+  </a>
+  <div class="content">
+    <div>
+      <h3>
+        <a href={url}>{title}</a>
+      </h3>
+
+      <small>
+        {
+          formatDate(date)
+        }
+      </small>
+    </div>
+    <p>{description}</p>
+    <a href={url}> </a>
+  </div>
+</article>
+
+
+<style>
+  img{
+    width: 80%;
+    margin: auto;
+  }
+  .card{
+    height: 500px;
+    
+
+  }
+</style>

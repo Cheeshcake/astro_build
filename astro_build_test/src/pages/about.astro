@@ -1,0 +1,23 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About" description="About Page">
+  <section class="container about" aria-label="About">
+    <img src="/public/images/robert.jpg" alt="headshot" transition:name="hero" />
+    <div class="content" transition:name="content">
+      <h1 class="h1">
+        Hello, I'm Robert, a computer science student and front-end web
+        developer from tunisia
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Aenean vel risus commodo vitae
+        praesent viverra in ac volutpat. Sollicitudin quam interdum elementum
+        vitae. Turpis posuere vitae est pharetra ullamcorper in lectus vel.
+      </p>
+      <a href="/contact/">
+        <button>Contact</button>
+      </a>
+    </div>
+  </section>
+</MainLayout>

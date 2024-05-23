@@ -1,0 +1,29 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const allProjects = await Astro.glob("./*.md");
+---
+
+<MainLayout title="Projects" description="Projects Page">
+  <div class="post-container">
+    {
+      allProjects.map((project) => (
+        <ProjectCard
+          frontmatter={project.frontmatter}
+          url={project.url}
+          tagType="h2"
+        />
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .post-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 2rem;
+      padding: 20px;
+    }
+</style>
