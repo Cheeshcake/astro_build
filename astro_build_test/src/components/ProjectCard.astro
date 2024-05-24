@@ -3,8 +3,6 @@ const { frontmatter, url} = Astro.props;
 
 import { formatDate } from "../js/tools";
 
-
-
 const { title, date, image, description} = frontmatter;
 ---
 
@@ -29,15 +27,16 @@ const { title, date, image, description} = frontmatter;
   </div>
 </article>
 
-
 <style>
-  img{
+  img {
     width: 80%;
     margin: auto;
   }
-  .card{
+  .card {
     height: 500px;
-    
-
+    transition: transform 0.3s ease; 
+  }
+  .card:hover {
+    transform: translateY(-15px); 
   }
 </style>
